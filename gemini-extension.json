@@ -1,0 +1,52 @@
+{
+  "name": "maker",
+  "description": "MAKER framework for recursive decomposition, voting, and red-flagging.",
+  "commands": [
+    {
+      "name": "maker",
+      "description": "Run the MAKER framework on a task.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "task": { "type": "string", "description": "The task to perform." }
+        },
+        "required": ["task"]
+      }
+    }
+  ],
+  "tools": [
+    {
+      "name": "maker_decompose",
+      "description": "Decompose a complex task into subtasks.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "task": { "type": "string", "description": "The task to decompose." }
+        },
+        "required": ["task"]
+      }
+    },
+    {
+      "name": "maker_vote",
+      "description": "Vote on the best solution among multiple candidates.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "candidates": { "type": "array", "items": { "type": "string" }, "description": "List of candidate solutions." }
+        },
+        "required": ["candidates"]
+      }
+    },
+    {
+      "name": "maker_redflag",
+      "description": "Identify red flags or issues in a proposed solution.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "solution": { "type": "string", "description": "The solution to review." }
+        },
+        "required": ["solution"]
+      }
+    }
+  ]
+}
