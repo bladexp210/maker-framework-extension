@@ -1,5 +1,6 @@
 {
-  "name": "maker",
+  "name": "maker-framework-extension",
+  "version": "0.1.0",
   "description": "MAKER framework for recursive decomposition, voting, and red-flagging.",
   "commands": [
     {
@@ -11,6 +12,18 @@
           "task": { "type": "string", "description": "The task to perform." }
         },
         "required": ["task"]
+      }
+    },
+    {
+      "name": "github:search-repositories",
+      "description": "Search for GitHub repositories.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "The search query." },
+          "limit": { "type": "number", "description": "Maximum number of results.", "default": 10 }
+        },
+        "required": ["query"]
       }
     }
   ],
