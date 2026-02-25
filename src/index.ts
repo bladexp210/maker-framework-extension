@@ -47,7 +47,7 @@ async function main() {
     }
 
     switch (command) {
-      case 'run':
+      case 'run': {
         const idea = positionalArgs.slice(1).join(' ');
         if (!idea) {
           console.error('Error: Please provide an idea for the MAKER process.');
@@ -56,11 +56,13 @@ async function main() {
         }
         await orchestrator.runMaker(idea, defaultConfig);
         break;
+      }
 
-      case 'resume':
+      case 'resume': {
         const stateFile = positionalArgs[1];
         await orchestrator.resumeMaker(stateFile);
         break;
+      }
 
       case 'help':
         showHelp();

@@ -1,4 +1,4 @@
-import { IMakerTask, MakerStatus } from '../types/maker.js';
+import { IMakerTask } from '../types/maker.js';
 
 /**
  * Manages operations on the hierarchical task decomposition tree.
